@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct PomodoroTimerApp: App {
+struct zenApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -22,6 +22,8 @@ struct PomodoroTimerApp: App {
                         window.titlebarAppearsTransparent = true
                     }
                 }
+                .fixedSize()
+                .frame(width: 350, height: 240, alignment: .center)
         }
     }
 }
