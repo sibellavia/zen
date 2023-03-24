@@ -9,12 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC16747429CE2DBE009B52DA /* zenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16747329CE2DBE009B52DA /* zenApp.swift */; };
 		FC16747629CE2DBE009B52DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16747529CE2DBE009B52DA /* ContentView.swift */; };
-		FC16747829CE2DC0009B52DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC16747729CE2DC0009B52DA /* Assets.xcassets */; };
-		FC16747B29CE2DC0009B52DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC16747A29CE2DC0009B52DA /* Preview Assets.xcassets */; };
-		FC16748629CE2DC0009B52DA /* zenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16748529CE2DC0009B52DA /* zenTests.swift */; };
-		FC16749029CE2DC0009B52DA /* zenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16748F29CE2DC0009B52DA /* zenUITests.swift */; };
-		FC16749229CE2DC0009B52DA /* zenUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16749129CE2DC0009B52DA /* zenUITestsLaunchTests.swift */; };
-		FC16749F29CE2F80009B52DA /* CustomWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16749E29CE2F80009B52DA /* CustomWindow.swift */; };
+		FC1674DA29CE63F7009B52DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1674D929CE63F7009B52DA /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,15 +33,10 @@
 		FC16747029CE2DBE009B52DA /* zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC16747329CE2DBE009B52DA /* zenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenApp.swift; sourceTree = "<group>"; };
 		FC16747529CE2DBE009B52DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FC16747729CE2DC0009B52DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC16747A29CE2DC0009B52DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC16747C29CE2DC0009B52DA /* zen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = zen.entitlements; sourceTree = "<group>"; };
 		FC16748129CE2DC0009B52DA /* zenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC16748529CE2DC0009B52DA /* zenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenTests.swift; sourceTree = "<group>"; };
 		FC16748B29CE2DC0009B52DA /* zenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC16748F29CE2DC0009B52DA /* zenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenUITests.swift; sourceTree = "<group>"; };
-		FC16749129CE2DC0009B52DA /* zenUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FC16749E29CE2F80009B52DA /* CustomWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWindow.swift; sourceTree = "<group>"; };
+		FC1674D929CE63F7009B52DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				FC16747229CE2DBE009B52DA /* zen */,
-				FC16748429CE2DC0009B52DA /* zenTests */,
-				FC16748E29CE2DC0009B52DA /* zenUITests */,
 				FC16747129CE2DBE009B52DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,39 +85,12 @@
 		FC16747229CE2DBE009B52DA /* zen */ = {
 			isa = PBXGroup;
 			children = (
+				FC1674D929CE63F7009B52DA /* AppDelegate.swift */,
 				FC16747329CE2DBE009B52DA /* zenApp.swift */,
 				FC16747529CE2DBE009B52DA /* ContentView.swift */,
-				FC16747729CE2DC0009B52DA /* Assets.xcassets */,
 				FC16747C29CE2DC0009B52DA /* zen.entitlements */,
-				FC16747929CE2DC0009B52DA /* Preview Content */,
-				FC16749E29CE2F80009B52DA /* CustomWindow.swift */,
 			);
 			path = zen;
-			sourceTree = "<group>";
-		};
-		FC16747929CE2DC0009B52DA /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				FC16747A29CE2DC0009B52DA /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FC16748429CE2DC0009B52DA /* zenTests */ = {
-			isa = PBXGroup;
-			children = (
-				FC16748529CE2DC0009B52DA /* zenTests.swift */,
-			);
-			path = zenTests;
-			sourceTree = "<group>";
-		};
-		FC16748E29CE2DC0009B52DA /* zenUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FC16748F29CE2DC0009B52DA /* zenUITests.swift */,
-				FC16749129CE2DC0009B52DA /* zenUITestsLaunchTests.swift */,
-			);
-			path = zenUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC16747B29CE2DC0009B52DA /* Preview Assets.xcassets in Resources */,
-				FC16747829CE2DC0009B52DA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC1674DA29CE63F7009B52DA /* AppDelegate.swift in Sources */,
 				FC16747629CE2DBE009B52DA /* ContentView.swift in Sources */,
 				FC16747429CE2DBE009B52DA /* zenApp.swift in Sources */,
-				FC16749F29CE2F80009B52DA /* CustomWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC16748629CE2DC0009B52DA /* zenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +238,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC16749229CE2DC0009B52DA /* zenUITestsLaunchTests.swift in Sources */,
-				FC16749029CE2DC0009B52DA /* zenUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

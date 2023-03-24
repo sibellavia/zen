@@ -9,10 +9,11 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let fontSize: CGFloat = 50
     
     @State private var timer: AnyCancellable?
-    @State private var timeRemaining = 1500 // 25 minuti in secondi
+    @State private var timeRemaining = 1500
     @State private var timerRunning = false
 
     private func startTimer() {
@@ -22,11 +23,21 @@ struct ContentView: View {
             .sink { _ in
                 if timeRemaining > 0 {
                     timeRemaining -= 1
-                } else {
-                    timer?.cancel()
-                    timerRunning = false
-                }
-            }
+
+                    // Aggiorna l'icona dell'applicazione nella top bar
+                    if let appDelegate = NSApp.delegate as? AppDelegate,
+                                       let button = appDelegate.statusItem?.button {
+
+                                        let progress = timerProgress()
+                                        let iconImage = NSImage(named: "zenIcon")?.withProgress(progress)
+                                        button.image = iconImage
+                                    }
+
+                                } else {
+                                    timer?.cancel()
+                                    timerRunning = false
+                                }
+                            }
     }
 
     private func stopTimer() {
@@ -36,6 +47,10 @@ struct ContentView: View {
 
     private func resetTimer() {
         timeRemaining = 1500
+    }
+    
+    private func timerProgress() -> CGFloat {
+        return CGFloat(1 - Double(timeRemaining) / 1500.0)
     }
     
     var body: some View {
