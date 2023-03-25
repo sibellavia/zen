@@ -13,50 +13,17 @@
 		FC1674DA29CE63F7009B52DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1674D929CE63F7009B52DA /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		FC16748229CE2DC0009B52DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC16746829CE2DBE009B52DA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC16746F29CE2DBE009B52DA;
-			remoteInfo = zen;
-		};
-		FC16748C29CE2DC0009B52DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC16746829CE2DBE009B52DA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FC16746F29CE2DBE009B52DA;
-			remoteInfo = zen;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		FC0DDC3829CEE90400C55E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC16747029CE2DBE009B52DA /* zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC16747329CE2DBE009B52DA /* zenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenApp.swift; sourceTree = "<group>"; };
 		FC16747529CE2DBE009B52DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC16747C29CE2DC0009B52DA /* zen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = zen.entitlements; sourceTree = "<group>"; };
-		FC16748129CE2DC0009B52DA /* zenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC16748B29CE2DC0009B52DA /* zenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1674D929CE63F7009B52DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FC16746D29CE2DBE009B52DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC16747E29CE2DC0009B52DA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC16748829CE2DC0009B52DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,8 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				FC16747029CE2DBE009B52DA /* zen.app */,
-				FC16748129CE2DC0009B52DA /* zenTests.xctest */,
-				FC16748B29CE2DC0009B52DA /* zenUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,42 +81,6 @@
 			productReference = FC16747029CE2DBE009B52DA /* zen.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FC16748029CE2DC0009B52DA /* zenTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC16749829CE2DC0009B52DA /* Build configuration list for PBXNativeTarget "zenTests" */;
-			buildPhases = (
-				FC16747D29CE2DC0009B52DA /* Sources */,
-				FC16747E29CE2DC0009B52DA /* Frameworks */,
-				FC16747F29CE2DC0009B52DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC16748329CE2DC0009B52DA /* PBXTargetDependency */,
-			);
-			name = zenTests;
-			productName = zenTests;
-			productReference = FC16748129CE2DC0009B52DA /* zenTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		FC16748A29CE2DC0009B52DA /* zenUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC16749B29CE2DC0009B52DA /* Build configuration list for PBXNativeTarget "zenUITests" */;
-			buildPhases = (
-				FC16748729CE2DC0009B52DA /* Sources */,
-				FC16748829CE2DC0009B52DA /* Frameworks */,
-				FC16748929CE2DC0009B52DA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FC16748D29CE2DC0009B52DA /* PBXTargetDependency */,
-			);
-			name = zenUITests;
-			productName = zenUITests;
-			productReference = FC16748B29CE2DC0009B52DA /* zenUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,14 +93,6 @@
 				TargetAttributes = {
 					FC16746F29CE2DBE009B52DA = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					FC16748029CE2DC0009B52DA = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = FC16746F29CE2DBE009B52DA;
-					};
-					FC16748A29CE2DC0009B52DA = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = FC16746F29CE2DBE009B52DA;
 					};
 				};
 			};
@@ -189,8 +110,6 @@
 			projectRoot = "";
 			targets = (
 				FC16746F29CE2DBE009B52DA /* zen */,
-				FC16748029CE2DC0009B52DA /* zenTests */,
-				FC16748A29CE2DC0009B52DA /* zenUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,20 +120,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0DDC3929CEE90400C55E56 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC16747F29CE2DC0009B52DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC16748929CE2DC0009B52DA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,34 +136,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC16747D29CE2DC0009B52DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FC16748729CE2DC0009B52DA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FC16748329CE2DC0009B52DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC16746F29CE2DBE009B52DA /* zen */;
-			targetProxy = FC16748229CE2DC0009B52DA /* PBXContainerItemProxy */;
-		};
-		FC16748D29CE2DC0009B52DA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FC16746F29CE2DBE009B52DA /* zen */;
-			targetProxy = FC16748C29CE2DC0009B52DA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FC16749329CE2DC0009B52DA /* Debug */ = {
@@ -296,7 +174,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -357,6 +235,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -370,7 +249,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Release;
 		};
@@ -386,6 +265,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zen/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,6 +291,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"zen/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,74 +302,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FC16749929CE2DC0009B52DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simonebellavia.zenTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zen";
-			};
-			name = Debug;
-		};
-		FC16749A29CE2DC0009B52DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simonebellavia.zenTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/zen";
-			};
-			name = Release;
-		};
-		FC16749C29CE2DC0009B52DA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simonebellavia.zenUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = zen;
-			};
-			name = Debug;
-		};
-		FC16749D29CE2DC0009B52DA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = simonebellavia.zenUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = zen;
 			};
 			name = Release;
 		};
@@ -509,24 +322,6 @@
 			buildConfigurations = (
 				FC16749629CE2DC0009B52DA /* Debug */,
 				FC16749729CE2DC0009B52DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC16749829CE2DC0009B52DA /* Build configuration list for PBXNativeTarget "zenTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC16749929CE2DC0009B52DA /* Debug */,
-				FC16749A29CE2DC0009B52DA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FC16749B29CE2DC0009B52DA /* Build configuration list for PBXNativeTarget "zenUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FC16749C29CE2DC0009B52DA /* Debug */,
-				FC16749D29CE2DC0009B52DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

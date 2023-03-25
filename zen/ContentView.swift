@@ -7,13 +7,14 @@
 
 import SwiftUI
 import Combine
+import Foundation
 
 struct ContentView: View {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     let fontSize: CGFloat = 50
     
     @State private var timer: AnyCancellable?
-    @State private var timeRemaining = 1500
+    @State var timeRemaining = 1500
     @State private var timerRunning = false
 
     private func startTimer() {
@@ -93,9 +94,10 @@ struct ContentView: View {
 
             }
         }
-        .frame(width: 350, height: 240)
-        .fixedSize()
-        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.black)
+        .foregroundColor(Color.white)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
         .onAppear {
                     if let button = NSApp.mainMenu?.item(withTag: 1)?.submenu?.item(withTag: 1)?.view as? NSStatusBarButton {
                         let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -107,13 +109,17 @@ struct ContentView: View {
                 }
 
     }
-
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.dark)
-            .environment(\.sizeCategory, .medium)
+    
+    func makeNSView() -> NSView {
+            return NSHostingView(rootView: self)
     }
+
 }
+
+// struct ContentView_Previews: PreviewProvider {
+//     static var previews: some View {
+//         ContentView()
+//             .preferredColorScheme(.dark)
+//             .environment(\.sizeCategory, .medium)
+//     }
+// }
