@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0DDC3929CEE90400C55E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0DDC3829CEE90400C55E56 /* Assets.xcassets */; };
 		FC16747429CE2DBE009B52DA /* zenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16747329CE2DBE009B52DA /* zenApp.swift */; };
 		FC16747629CE2DBE009B52DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16747529CE2DBE009B52DA /* ContentView.swift */; };
 		FC1674DA29CE63F7009B52DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1674D929CE63F7009B52DA /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC0DDC3829CEE90400C55E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC16747029CE2DBE009B52DA /* zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC16747329CE2DBE009B52DA /* zenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenApp.swift; sourceTree = "<group>"; };
 		FC16747529CE2DBE009B52DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		FC16746729CE2DBE009B52DA = {
 			isa = PBXGroup;
 			children = (
+				FC0DDC3829CEE90400C55E56 /* Assets.xcassets */,
 				FC16747229CE2DBE009B52DA /* zen */,
 				FC16747129CE2DBE009B52DA /* Products */,
 			);
@@ -197,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC0DDC3929CEE90400C55E56 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
