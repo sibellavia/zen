@@ -42,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         // Crea una nuova finestra senza cornice e senza barra del titolo
-        let styleMask: NSWindow.StyleMask = [.borderless, .fullSizeContentView]
+        let styleMask: NSWindow.StyleMask = [.borderless, .fullSizeContentView, .closable, .miniaturizable, .resizable]
         window = NSWindow(contentRect: NSMakeRect(0, 0, 350, 200),
                           styleMask: styleMask,
                           backing: .buffered,
@@ -50,11 +50,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         
         // Imposta le dimensioni della finestra e disabilita il ridimensionamento
         window.setFrame(NSRect(x: 0, y: 0, width: 350, height: 200), display: true)
-        window.center()
         window.isReleasedWhenClosed = false
         window.isMovableByWindowBackground = true
         window.minSize = NSSize(width: 350, height: 200)
         window.maxSize = NSSize(width: 350, height: 200)
+        
+        window.center()
         
         // Imposta il contenuto della finestra
         window.contentView = NSHostingView(rootView: ContentView())
