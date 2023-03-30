@@ -61,6 +61,25 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         }
     }
     
+    @objc func setCustomTimerDuration(_ sender: NSMenuItem) {
+        let alert = NSAlert()
+        alert.messageText = "Enter custom timer duration (minutes)"
+        alert.addButton(withTitle: "OK")
+        alert.addButton(withTitle: "Cancel")
+
+        let textField = NSTextField(frame: NSRect(x: 0, y: 0, width: 200, height: 24))
+        textField.placeholderString = "Duration in minutes"
+        alert.accessoryView = textField
+
+        let response = alert.runModal()
+        if response == .alertFirstButtonReturn {
+            let durationText = textField.stringValue.trimmingCharacters(in: .whitespacesAndNewlines)
+            if let duration = Int(durationText) {
+                timeRemaining = duration * 60
+            }
+        }
+    }
+    
     var statusItem: NSStatusItem?
     var cancellables = Set<AnyCancellable>()
     
@@ -126,6 +145,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         timerOptions.addItem(withTitle: "25 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
         timerOptions.addItem(withTitle: "50 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
         timerOptions.addItem(withTitle: "90 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
+        timerOptions.addItem(withTitle: "Custom...", action: #selector(setCustomTimerDuration(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Timer Options", action: nil, keyEquivalent: "").submenu = timerOptions
         
         statusItem?.menu = menu
