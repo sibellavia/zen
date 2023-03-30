@@ -19,6 +19,16 @@ struct zenApp: App {
 
 class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     
+    var timerMenuItem: NSMenuItem?
+    
+    @Published var timeRemaining = 1500 {
+        didSet {
+            if let timerMenuItem = timerMenuItem {
+                timerMenuItem.title = "Timer: \(String(format: "%02d:%02d", timeRemaining / 60, timeRemaining % 60))"
+            }
+        }
+    }
+    
     var window: NSWindow!
     
     func showAppWindow() {
@@ -35,7 +45,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
             showAppWindow()
         }
     }
-
+    
+    @objc func openAppWindow(_ sender: Any?) {
+        showAppWindow()
+    }
+    
+    @objc func hideApp(_ sender: Any?) {
+        NSApp.hide(nil)
+    }
+    
+    @objc func setTimerDuration(_ sender: NSMenuItem) {
+        if let durationTitle = sender.title.components(separatedBy: " ").first,
+           let duration = Int(durationTitle) {
+            timeRemaining = duration * 60
+        }
+    }
+    
     var statusItem: NSStatusItem?
     var cancellables = Set<AnyCancellable>()
     
@@ -58,12 +83,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         window.center()
         
         // Imposta il contenuto della finestra
-        window.contentView = NSHostingView(rootView: ContentView())
+        window.contentView = NSHostingView(rootView: ContentView(appDelegate: self))
         
         // Imposta lo sfondo della finestra trasparente e non opaco
         window.backgroundColor = NSColor.clear
         window.isOpaque = false
-
+        
         // Mostra la finestra e rendila la chiave principale
         window.makeKeyAndOrderFront(nil)
         
@@ -79,20 +104,41 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         // opening the application
         statusItem?.button?.action = #selector(AppDelegate.statusItemClicked(_:))
         
+        statusItem?.button?.title = "Timer: \(String(format: "%02d:%02d", timeRemaining / 60, timeRemaining % 60))"
+        
         // Add a menu to the status item
         let menu = NSMenu()
+        
+        menu.addItem(NSMenuItem(title: "Timer: 25:00", action: nil, keyEquivalent: ""))
+        timerMenuItem = menu.item(at: 0)
+        $timeRemaining
+            .map { timeRemaining in
+                "Timer: \(String(format: "%02d:%02d", timeRemaining / 60, timeRemaining % 60))"
+            }
+            .assign(to: \.title, on: timerMenuItem!)
+            .store(in: &cancellables)
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(withTitle: "Open", action: #selector(openAppWindow(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Hide", action: #selector(hideApp(_:)), keyEquivalent: "h")
         menu.addItem(withTitle: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+        menu.addItem(NSMenuItem.separator())
+        let timerOptions = NSMenu(title: "Timer Options")
+        timerOptions.addItem(withTitle: "25 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
+        timerOptions.addItem(withTitle: "50 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
+        timerOptions.addItem(withTitle: "90 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
+        menu.addItem(withTitle: "Timer Options", action: nil, keyEquivalent: "").submenu = timerOptions
+        
         statusItem?.menu = menu
         
         // Start the application
         NSApp.run()
     }
-
-
+    
+    
     func applicationWillTerminate(_ aNotification: Notification) {
         // tearing down the application
     }
-
+    
 }
 
 extension NSImage {
@@ -102,12 +148,12 @@ extension NSImage {
         let circleWidth: CGFloat = 4.0
         let circleMargin: CGFloat = 2.0
         let circleRadius = (min(imageWidth, imageHeight) - circleWidth - circleMargin) / 2.0
-
+        
         let image = NSImage(size: NSSize(width: imageWidth, height: imageHeight), flipped: false) { rect in
             let context = NSGraphicsContext.current?.cgContext
             context?.setFillColor(NSColor.clear.cgColor)
             context?.fill(rect)
-
+            
             context?.setLineWidth(circleWidth)
             context?.setLineCap(.round)
             context?.setStrokeColor(NSColor.white.cgColor)
@@ -117,10 +163,10 @@ extension NSImage {
                             endAngle: -CGFloat.pi / 2.0 + 2.0 * CGFloat.pi * progress,
                             clockwise: false)
             context?.strokePath()
-
+            
             return true
         }
-
+        
         return image
     }
 }
