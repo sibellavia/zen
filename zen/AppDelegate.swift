@@ -3,19 +3,6 @@ import SwiftUI
 import Combine
 import AppKit
 
-class MainApp: ObservableObject {
-    @StateObject var appDelegate = AppDelegate()
-}
-
-@main
-struct zenApp: App {
-    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    
-    var body: some Scene {
-        Settings {}
-    }
-}
-
 
 class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     
@@ -77,6 +64,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
             if let duration = Int(durationText) {
                 timeRemaining = duration * 60
             }
+        }
+    }
+    
+    @objc func openAboutWebsite(_ sender: Any?) {
+        if let url = URL(string: "https://www.simonebellavia.com") {
+            NSWorkspace.shared.open(url)
         }
     }
     
@@ -147,6 +140,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         timerOptions.addItem(withTitle: "90 minutes", action: #selector(setTimerDuration(_:)), keyEquivalent: "")
         timerOptions.addItem(withTitle: "Custom...", action: #selector(setCustomTimerDuration(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "Timer Options", action: nil, keyEquivalent: "").submenu = timerOptions
+        menu.addItem(NSMenuItem.separator())
+        menu.addItem(withTitle: "About", action: #selector(openAboutWebsite(_:)), keyEquivalent: "")
         
         statusItem?.menu = menu
         
@@ -161,32 +156,4 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     
 }
 
-extension NSImage {
-    func withProgress(_ progress: CGFloat) -> NSImage {
-        let imageWidth: CGFloat = 2
-        let imageHeight: CGFloat = 2
-        let circleWidth: CGFloat = 4.0
-        let circleMargin: CGFloat = 2.0
-        let circleRadius = (min(imageWidth, imageHeight) - circleWidth - circleMargin) / 2.0
-        
-        let image = NSImage(size: NSSize(width: imageWidth, height: imageHeight), flipped: false) { rect in
-            let context = NSGraphicsContext.current?.cgContext
-            context?.setFillColor(NSColor.clear.cgColor)
-            context?.fill(rect)
-            
-            context?.setLineWidth(circleWidth)
-            context?.setLineCap(.round)
-            context?.setStrokeColor(NSColor.white.cgColor)
-            context?.addArc(center: CGPoint(x: rect.size.width / 2.0, y: rect.size.height / 2.0),
-                            radius: circleRadius,
-                            startAngle: -CGFloat.pi / 2.0,
-                            endAngle: -CGFloat.pi / 2.0 + 2.0 * CGFloat.pi * progress,
-                            clockwise: false)
-            context?.strokePath()
-            
-            return true
-        }
-        
-        return image
-    }
-}
+
