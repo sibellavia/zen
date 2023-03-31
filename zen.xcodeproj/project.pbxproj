@@ -47,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				FC0DDC3829CEE90400C55E56 /* Assets.xcassets */,
+				FC08C93829D7484900D98D9B /* .gitignore */,
 				FC16747229CE2DBE009B52DA /* zen */,
 				FC16747129CE2DBE009B52DA /* Products */,
 			);
@@ -63,7 +64,6 @@
 		FC16747229CE2DBE009B52DA /* zen */ = {
 			isa = PBXGroup;
 			children = (
-				FC08C93829D7484900D98D9B /* .gitignore */,
 				FC08C92E29D73F7E00D98D9B /* MainApp.swift */,
 				FC1674D929CE63F7009B52DA /* AppDelegate.swift */,
 				FC16747329CE2DBE009B52DA /* zenApp.swift */,
