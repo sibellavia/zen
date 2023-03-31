@@ -11,6 +11,7 @@
 		FC08C93329D73FD600D98D9B /* NSImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C93229D73FD600D98D9B /* NSImageExtension.swift */; };
 		FC08C93529D7402F00D98D9B /* TimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C93429D7402F00D98D9B /* TimerType.swift */; };
 		FC08C93729D7404100D98D9B /* ContentView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC08C93629D7404100D98D9B /* ContentView+Helpers.swift */; };
+		FC08C93929D7484900D98D9B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FC08C93829D7484900D98D9B /* .gitignore */; };
 		FC0DDC3929CEE90400C55E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC0DDC3829CEE90400C55E56 /* Assets.xcassets */; };
 		FC16747429CE2DBE009B52DA /* zenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16747329CE2DBE009B52DA /* zenApp.swift */; };
 		FC16747629CE2DBE009B52DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16747529CE2DBE009B52DA /* ContentView.swift */; };
@@ -22,6 +23,7 @@
 		FC08C93229D73FD600D98D9B /* NSImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtension.swift; sourceTree = "<group>"; };
 		FC08C93429D7402F00D98D9B /* TimerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerType.swift; sourceTree = "<group>"; };
 		FC08C93629D7404100D98D9B /* ContentView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Helpers.swift"; sourceTree = "<group>"; };
+		FC08C93829D7484900D98D9B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FC0DDC3829CEE90400C55E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC16747029CE2DBE009B52DA /* zen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC16747329CE2DBE009B52DA /* zenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zenApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		FC16747229CE2DBE009B52DA /* zen */ = {
 			isa = PBXGroup;
 			children = (
+				FC08C93829D7484900D98D9B /* .gitignore */,
 				FC08C92E29D73F7E00D98D9B /* MainApp.swift */,
 				FC1674D929CE63F7009B52DA /* AppDelegate.swift */,
 				FC16747329CE2DBE009B52DA /* zenApp.swift */,
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC08C93929D7484900D98D9B /* .gitignore in Resources */,
 				FC0DDC3929CEE90400C55E56 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
