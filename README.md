@@ -3,7 +3,7 @@ Zen
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/simoneb1x/zen/main/icon_256x256.png?token=GHSAT0AAAAAAB7CHVUHQWL2EMAB22LYDZEUZBKVGEA"/>
+<img src="https://i.imgur.com/WYuw0Ue.png"/>
 <p>
 
 # Overview
