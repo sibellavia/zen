@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var timeRemaining = 1500
     @State var timerRunning = false
     @State var currentTimerType: TimerType = .work
+    @State var customDuration = 1500
     
     // Aggiungi una variabile di stato per il timer rimanente
     @State var toolbarTimeRemaining = 1500

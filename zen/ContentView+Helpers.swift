@@ -5,6 +5,11 @@ import UserNotifications
 
 extension ContentView {
  
+    func setUserDefinedDuration(duration: Int) {
+        appDelegate.timeRemaining = duration
+        customDuration = duration
+    }
+    
     func startTimer() {
         timerRunning = true
         timer = Timer.publish(every: 1, on: .main, in: .common)
@@ -43,7 +48,7 @@ extension ContentView {
             playSound(soundName: "Glass")
             showNotification(title: "The break begins", body: "Time to take a five-minute break.")
         case .work_break:
-            appDelegate.timeRemaining = 60 // 25 minutes work
+            appDelegate.timeRemaining = customDuration
             currentTimerType = .work
             playSound(soundName: "Blow")
             showNotification(title: "Another pomodoro starts", body: "Time to work for 25 minutes.")
